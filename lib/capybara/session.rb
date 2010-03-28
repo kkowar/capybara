@@ -215,6 +215,11 @@ module Capybara
       require 'capybara/save_and_open_page'
       Capybara::SaveAndOpenPage.save_and_open_page(body)
     end
+    
+    def save_and_open_screenshot
+      require 'capybara/save_and_open_screenshot'
+      Capybara::SaveAndOpenScreenshot.save_and_open_screenshot
+    end
 
     #return node identified by locator or raise ElementNotFound(using desc)
     def locate(kind_or_locator, locator=nil, fail_msg = nil)
